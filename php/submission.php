@@ -59,8 +59,12 @@
     $headers = 'From: ' . $email . "\r\n" .
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
-    mail($email_to, $email_subject, $email_message, $headers);
+    @mail($email_to, $email_subject, $email_message, $headers);
     if ($requestCopy) {
-        mail($email, $email_copy_subject, $email_message, $headers);
+        @mail($email, $email_copy_subject, $email_message, $headers);
     }
+?>
+Thank you for contacting me. I will be in touch with you very soon.
+<?php
+}
 ?>
