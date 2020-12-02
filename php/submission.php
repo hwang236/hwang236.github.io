@@ -5,6 +5,7 @@
 
     $email_to = "hemingwang2021@u.northwestern.edu";
     $email_subject = "New form submissions from my portfolio website";
+    $email_copy_subject = "A copy of your message sent to Heming Wang";
 
     function problem($error)
     {
@@ -28,18 +29,9 @@
     $email = $_POST['email'];
     $affiliation = $_POST['affiliation'];
     $message = $_POST['subject'];
-
-    $error_message = "";
-    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-
-    if (!preg_match($email_exp, $email)) {
-        $error_message .= 'The Email address you entered does not appear to be valid.<br>';
-    }
-
-    $string_exp = "/^[A-Za-z .'-]+$/";
-
-    if (!preg_match($string_exp, $name)) {
-        $error_message .= 'The Name you entered does not appear to be valid.<br>';
+    $requestCopy = false;
+    if ($_POST['requestcopy']) {
+        $requestCopy = true;
     }
 
     if (strlen($message) < 2) {
@@ -67,5 +59,8 @@
     $headers = 'From: ' . $email . "\r\n" .
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
-    @mail($email_to, $email_subject, $email_message, $headers);
+    mail($email_to, $email_subject, $email_message, $headers);
+    if ($requestCopy) {
+        mail($email, $email_copy_subject, $email_message, $headers);
+    }
 ?>
