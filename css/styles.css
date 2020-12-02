@@ -321,6 +321,12 @@ input[type=text], select, textarea {
     resize: vertical;
 }
 
+input[type=checkbox] {
+    margin-top: 6px;
+    margin-bottom: 16px;
+    text-align:left;
+}
+
 #subject {
     height: 200px;
 }

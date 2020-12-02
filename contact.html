@@ -41,11 +41,11 @@
                 <form method="post" action="php/submission.php">
                     <!--name field, required-->
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="fullname" placeholder="Your name" required aria-required="true" />
+                    <input type="text" id="name" name="fullname" placeholder="Your name" title="FirstName LastName" pattern="[A-ZÖÄÜ][A-Z]" required aria-required="true" />
 
                     <!--email field, required-->
                     <label for="email-addr">Email Address</label>
-                    <input type="text" id="email-addr" name="email" placeholder="Your email address" required aria-required="true" />
+                    <input type="text" id="email-addr" name="email" placeholder="Your email address" title="character@character.domain" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required aria-required="true" />
 
                     <!--affiliation field, optional-->
                     <label for="affiliation">Company/Institution</label>
@@ -54,6 +54,10 @@
                     <!--subject field, required-->
                     <label for="subject">Subject</label>
                     <textarea id="subject" name="subject" placeholder="Leave me a message" required aria-required="true"></textarea>
+                    
+                    <!--checkbox field for user to select whether they want a copy of their message-->
+                    <input type="checkbox" id="requestcopy" name="requestcopy" value="No">
+                    <label for="requestcopy">Check this box to receive a copy of your message</label><br />
 
                     <input type="submit" value="Submit" />
                 </form>
