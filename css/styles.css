@@ -27,7 +27,7 @@ nav.top-nav .nav-items{
 }
 
 /*change the style of the menu items on mouse hover*/
-nav.top-nav .nav-items:hover .nav-items:focus {
+nav.top-nav .nav-items:hover {
     color: white;
     background-color: #3b3b3b;
     text-decoration: underline;
@@ -56,7 +56,7 @@ nav.top-nav .pulldown-menu li {
 }
 
 /*styling pulldown menu on mouse hover*/
-nav.top-nav li:hover li:focus .pulldown-menu{
+nav.top-nav li:hover .pulldown-menu{
     display: block;
 }
 
@@ -84,9 +84,9 @@ nav.top-nav li:hover li:focus .pulldown-menu{
     color: lightgray;
 }
 
-    .nav-links:hover .nav-links:focus {
-        color: white;
-    }
+.nav-links:hover {
+    color: white;
+}
 
 /*universal selector for all main bodies*/
 main{
@@ -146,11 +146,11 @@ main{
     -ms-transform: translate(-50%, -50%);
     text-align: center;
 }
-.project-links:hover .project-links:focus .project-thumbnail {
+.project-links:hover .project-thumbnail {
     opacity: 0.3;
 }
 
-.project-links:hover .project-links:focus .middle-overlay {
+.project-links:hover .middle-overlay {
     opacity: 1;
 }
 
