@@ -1,0 +1,337 @@
+/*This section contains all the styling for the top nav bar*/
+nav.top-nav{
+    position:fixed;
+    background-color:#2b2b2b;
+    top:0px;
+    left:0px;
+    right:0px;
+    z-index: 999;
+}
+
+nav.top-nav ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+nav.top-nav .nav-items{
+    color:lightgray;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bold;
+    font-size:20px;
+    display:inline-block;
+    margin:0px;
+    padding:20px 40px 20px 40px;
+    user-select:none;
+    position:relative;
+}
+
+/*change the style of the menu items on mouse hover*/
+nav.top-nav .nav-items:hover {
+    color: white;
+    background-color: #3b3b3b;
+    text-decoration: underline;
+}
+
+/*change the style of the menu items when active*/
+nav.top-nav .nav-items:active {
+    color: white;
+}
+/*styling pulldown menu in the nav bar*/
+nav.top-nav ul.pulldown-menu {
+    display: none;
+    position: absolute;
+    background-color: #3b3b3b;
+    left: 0px;
+    top: 63px; 
+    right:0px;
+}
+
+nav.top-nav .pulldown-menu li {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px 10px 20px;
+    text-align:center;
+}
+
+/*styling pulldown menu on mouse hover*/
+nav.top-nav li:hover .pulldown-menu{
+    display: block;
+}
+
+/*styling the name of the website*/
+.nav-title {
+    color: lightgray;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    display: inline-block;
+    margin: 0px;
+    padding: 12px 80px 18px 40px;
+    user-select: none;
+    position: relative;
+}
+
+.title-link {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.nav-links:hover {
+    color: white;
+}
+
+/*universal selector for all main bodies*/
+main{
+    
+    display:block;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top:90px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+
+/*This section contains all the styling for the landing page*/
+/*use flex box for project thumbnails*/
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.page-headers {
+    text-align: left;
+    width: 1330px;
+
+}
+
+
+/*Specify when to change flex direction to column, e.g. when viewing on phones*/
+@media (max-width: 1330px) {
+    .project-container {
+        flex-direction: column;
+    }
+}
+
+/*styling links to project details*/
+.project-links {
+    margin: 10px 25px 10px 25px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #2b2b2b;
+    width: 640px;
+    position: relative;
+}
+
+/*The next several blocks contain code to overlay text on image with mouse hover, using the tutorial from w3schools. 
+    Source: https://www.w3schools.com/howto/howto_css_image_overlay.asp */
+.middle-overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.project-links:hover .project-thumbnail{
+    opacity: 0.3;
+}
+
+.project-links:hover .middle-overlay{
+    opacity: 1;
+}
+
+.text-overlay {
+    color: white;
+    font-size: 24px;
+}
+
+.project-links a{
+    text-decoration: none;
+}
+
+.project-thumbnail {
+    width: 640px;
+    height: 360px;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.project-names {
+    color: lightgray;
+    font-size: 22px;
+    margin: 5px 10px 5px 2px;
+}
+
+/*use flex box for project details page*/
+.project-description-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1070px;
+    margin: auto;
+}
+
+/*Specify when to change flex direction to column, e.g. when viewing on phones*/
+@media (max-width: 800px) {
+    .project-description-container {
+        flex-direction: column;
+    }
+}
+
+/*This section contains all the styling for the project details page*/
+/*selector for images related to a project*/
+.project-image {
+    margin: 10px 25px 10px 10px;
+}
+
+.david-gif {
+    width: 400px;
+    height: 400px;
+}
+
+/*selector for project text description*/
+.project-text {
+    width: 600px;
+    margin: 10px 10px 10px 25px;
+}
+
+.project-text a {
+    text-decoration: none;
+    color: Highlight;
+}
+
+.project-text a:hover {
+    color: deepskyblue;
+}
+
+/*This section contains all the styling for the biography page*/
+/*use flex box for biography page*/
+.bio-container {
+    display: flex;
+    justify-content: center;
+}
+
+/*Specify when to change flex direction to column, e.g. when viewing on phones*/
+@media (max-width: 800px) {
+    .bio-container {
+        flex-direction: column;
+    }
+}
+
+/*selector for biography portrait*/
+.portrait-image {
+    margin: 10px 25px 10px 10px;
+    text-align: right;
+}
+
+.portrait-image img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+/*selector for biography text*/
+.bio-text {
+    width: 600px;
+    margin: 10px 10px 0px 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent transparent transparent black;
+    padding-left: 25px;
+    padding-bottom: 10px;
+}
+
+/*styling the link in my bio*/
+.bio-text a{
+    text-decoration: none;
+    color: Highlight;
+}
+
+/*change the color of the link in my bio on mouse hover*/
+.bio-text a:hover {
+    color: deepskyblue;
+}
+
+/*adjust margin the text pertaining to education history*/
+.bio-text .degrees {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.bio-text .unis {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #808080;
+}
+
+/*This section contains all the styling for the contact page*/
+/*use flex box for contact page*/
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+/*Specify when to change flex direction to column, e.g. when viewing on phones*/
+@media (max-width: 800px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+.contact-info {
+    margin: 10px 25px 10px 10px;
+    text-align: right;
+}
+
+/*selector for contact form*/
+.contact-form {
+    width: 600px;
+    margin: 10px 10px 0px 0px;
+    border-style:solid;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    border-width: 1px;
+    border-color: transparent transparent transparent black;
+}
+
+/*The remaining blocks are selectors for each fields in the contact form*/
+input[type=text], select, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+#subject {
+    height: 200px;
+}
+
+input[type=submit] {
+    background-color: #2d2d2d;
+    border: none;
+    color: lightgray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    padding: 12px 20px;
+}
+
+input[type=submit]:hover {
+    background-color: #3b3b3b;
+    color: white;
+}

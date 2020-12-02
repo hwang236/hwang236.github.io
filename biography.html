@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Biography</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!--main nav bar element-->
+    <nav class="top-nav" id="main-nav-bar" aria-label="Main-navigation-bar">
+        <ul role="menubar">
+            <li class="nav-title" role="menuitem"><a class="title-link" href="index.html">Heming Wang</a></li>
+            <li class="nav-items" role="menuitem"><a class="nav-links" href="index.html">Home</a></li>
+            <li class="nav-items" role="menuitem">
+                <a class="nav-links" href="biography.html" aria-current="page" aria-haspopup="true" aria-expanded="false">Biography</a>
+                <!--pull down menu with the main nav bar-->
+                <ul class="pulldown-menu">
+                    <li class="nav-items" role="menuitem"><a class="nav-links" href="docs/heming_wang_resume.pdf">My Resume</a></li>
+                </ul>
+            </li>
+            <li class="nav-items" role="menuitem">
+                <a class="nav-links" href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+    </nav>
+    <main>
+        <!--main container for biography page-->
+        <div class="bio-container">
+            <!--quick personal facts-->
+            <div class="portrait-image" >
+                <img src="img/portrait.jpg" alt="A portrait of Heming Wang" />
+                <h2>Heming Wang</h2>
+                <p>Graduate Student</p>
+                <p>Northwestern University</p>
+            </div>
+            <!--more detailed biography-->
+            <div class="bio-text">
+                <p>
+                    I am a master's student at Northwestern universiy. I graduated from University of Illinois Urbana-Champaign majoring in electrical engineering, and received my Bachelor of Science degree there in 2019.
+                </p>
+                <p>
+                    Currently, I am working with Dr. Florian Willomitzer in the Computational Photography Lab at Northwestern. My main focus is to help developing innovative 3D imaging techniques that can see qround corners or through scattering media.
+                </p>
+                <a href="docs/heming_wang_resume.pdf">Link to my resume</a>
+                <h2>Interests</h2>
+                <ul>
+                    <li>Computational Photography</li>
+                    <li>VR/AR/MR</li>
+                    <li>Signal Processing</li>
+                    <li>Digital Audio and Synthesizers</li>
+                </ul>
+                
+                <h2>Education</h2>
+                <ul>
+                    <li>
+                        <p class="degrees">M.S. in Electrical Engineering, in progress</p>
+                        <p class="unis">Northwestern University</p>
+                    </li>
+                    <li>
+                        <p class="degrees">B.S. in Electrical Engineering, 2019</p>
+                        <p class="unis">University of Illinois Urbana-Champaign</p>
+                    </li>
+                        
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Heming Wang</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!--main nav bar element-->
+    <nav class="top-nav" id="main-nav-bar" aria-label="Main-navigation-bar">
+        <ul role="menubar">
+            <li class="nav-title" role="menuitem"><a class="title-link" href="index.html" aria-current="page">Heming Wang</a></li>
+            <li class="nav-items" role="menuitem"><a class="nav-links" href="index.html" aria-current="page">Home</a></li>
+            <li class="nav-items" role="menuitem">
+                <a class="nav-links" href="biography.html" aria-haspopup="true" aria-expanded="false">Biography</a>
+                <!--pull down menu with the main nav bar-->
+                <ul class="pulldown-menu">
+                    <li class="nav-items" role="menuitem"><a class="nav-links" href="docs/heming_wang_resume.pdf">My Resume</a></li>
+                </ul>
+            </li>
+            <li class="nav-items" role="menuitem">
+                <a class="nav-links" href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+    </nav>
+    <main>
+        <!--main container for the project showcase in the landing page-->
+        <div class="project-container">
+            <div><h1 class="page-headers">Projects Showcase</h1></div>
+            <div class="project-links">
+                <a href="project.html">
+                    <img class="project-thumbnail" src="img/setup.jpg" alt="Time of flight 3D imaging setup" />
+                    <p class="project-names">Fully automated Time-of-Flight 3D imaging</p>
+                    <div class="middle-overlay">
+                        <div class="text-overlay">Details &#8594;</div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-links">
+                <img class="project-thumbnail" src="img/fm_radio.jpg" alt="FPGA based FM radio schematics" />
+                <p class="project-names">FPGA based FM radio</p>
+                <div class="middle-overlay">
+                    <div class="text-overlay">Sorry, no more details at this time</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
